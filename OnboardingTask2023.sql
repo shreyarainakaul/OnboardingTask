@@ -5,14 +5,11 @@ FROM ['AUS_Post_suburb v2$']
 Group By state
 
 
-
 3(b).Find out the number of unique postcodes, and suburbs in each city .
 
-SELECT DISTINCT city,COUNT(postcode) AS NOofPostcodes,COUNT(suburb) AS Noofsuburb
+SELECT DISTINCT city,postcode,suburb
 FROM ['AUS_Post_suburb v2$']
-GROUP BY city,state
-
-
+Order BY city
 
 3(c) Query the Average Property Median Value by Suburb
 
